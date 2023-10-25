@@ -5,7 +5,11 @@ fn main() {
 
 fn hello_world() {
     let str_slice = "World";
-    println!("Hello, {}", String::from(str_slice));
+    let x = format!("Hello, {}", String::from(str_slice));
+    let y = x; // 所有権の移動
+    // 所有権はyに移動済みなので下記はエラー
+    // println!("{}", x);
+    println!("{}", y);
 }
 
 fn fizz_buzz() {
