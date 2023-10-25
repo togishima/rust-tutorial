@@ -5,6 +5,20 @@ fn main() {
     for i in 1..16 {
         println!("{}", to_fizz_buzz_string(i));
     }
+
+    let mut counter = 16;
+    while counter <= 20 {
+        println!("{}", to_fizz_buzz_string(counter));
+        counter += 1;
+    }
+
+    loop {
+        counter += 1;
+        println!("{}", to_fizz_buzz_string(counter));
+        if counter == 30 {
+            break;
+        }
+    }
 }
 
 fn to_fizz_buzz_string(number: i32) -> String {
