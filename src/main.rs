@@ -1,6 +1,7 @@
 fn main() {
     hello_world();
     fizz_buzz();
+    print_tomato();
 }
 
 fn hello_world() {
@@ -10,6 +11,16 @@ fn hello_world() {
     // 所有権はyに移動済みなので下記はエラー
     // println!("{}", x);
     println!("{}", y);
+}
+
+fn print_tomato() {
+    let x = "to";
+    {
+        let y = &x; // 借用
+        let z = format!("{}ma", y); // toma
+        println!("{}", z);
+    }
+    println!("{}", x);
 }
 
 fn fizz_buzz() {
