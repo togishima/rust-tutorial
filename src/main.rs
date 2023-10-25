@@ -1,7 +1,10 @@
 fn main() {
     let str_slice = "World";
     println!("Hello, {}", String::from(str_slice));
+    fizz_buzz();
+}
 
+fn fizz_buzz() {
     for i in 1..16 {
         println!("{}", to_fizz_buzz_string(i));
     }
