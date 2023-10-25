@@ -3,6 +3,7 @@ fn main() {
         first_name: String::from("Bob"),
         last_name: String::from("Marley"),
     };
+    println!("{:?}", person);
     person.greet();
     // hello_world();
     // fizz_buzz();
@@ -13,6 +14,7 @@ trait Greeter {
     fn greet(&self);
 }
 
+#[derive(Debug)]
 struct Person {
     first_name: String,
     last_name: String,
