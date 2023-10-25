@@ -1,7 +1,11 @@
 fn main() {
+    hello_world();
+    fizz_buzz();
+}
+
+fn hello_world() {
     let str_slice = "World";
     println!("Hello, {}", String::from(str_slice));
-    fizz_buzz();
 }
 
 fn fizz_buzz() {
